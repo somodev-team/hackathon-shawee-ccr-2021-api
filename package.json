@@ -6,9 +6,10 @@
   "scripts": {
     "migrate-database": "knex migrate:latest",
     "seed-database": "knex seed:run",
-    "prestart": "npm run migrate-database && npm run seed-database",
-    "start": "ts-node-dev --require dotenv/config --respawn --ignore-watch node_modules --inspect=0.0.0.0:9222 src/index.ts",
-    "api": "node dist/api/index.js",
+    "predev-server": "npm run migrate-database && npm run seed-database",
+    "start": "docker-compose up",
+    "dev-server": "ts-node-dev --require dotenv/config --respawn --ignore-watch node_modules --inspect=0.0.0.0:9222 src/index.ts",
+    "api": "node dist/index.js",
     "build": "tsc -p tsconfig.production.json",
     "test-undo-migrate-database": "NODE_ENV=testing knex migrate:rollback --all",
     "test-migrate-database": "NODE_ENV=testing knex migrate:latest",

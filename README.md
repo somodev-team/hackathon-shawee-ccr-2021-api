@@ -1,10 +1,4 @@
-# Dindo
-
-## Hackathon Shawee CCR 2021
-
-# Rodar todo o projeto
-
-Para rodar o projeto completo execute `npm start` apartir da pasta raiz do projeto.
+# Dindo - Hackathon Shawee CCR 2021
 
 # API
 
