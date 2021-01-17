@@ -27,13 +27,15 @@ const log = {
 
 const config = {
   client: process.env.DATABASE_CLIENT,
-  connection: process.env.DATABASE_URL + '?ssl=true' || {
-    host: process.env.DATABASE_HOST || '',
-    user: process.env.DATABASE_USER || '',
-    password: process.env.DATABASE_PASS,
-    database: process.env.DATABASE_NAME,
-    filename: path.resolve('__tests__/database.sqlite'),
-  },
+  connection: process.env.DATABASE_URL
+    ? process.env.DATABASE_URL + '?ssl=true'
+    : {
+        host: process.env.DATABASE_HOST || '',
+        user: process.env.DATABASE_USER || '',
+        password: process.env.DATABASE_PASS,
+        database: process.env.DATABASE_NAME,
+        filename: path.resolve('__tests__/database.sqlite'),
+      },
   debug: process.env.NODE_ENV === 'development',
   log,
   useNullAsDefault: process.env.DATABASE_CLIENT === 'sqlite3',

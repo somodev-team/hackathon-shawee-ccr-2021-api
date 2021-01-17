@@ -2,13 +2,14 @@ import * as Knex from 'knex'
 import { v4 as uuidv4 } from 'uuid'
 
 export async function seed(knex: Knex): Promise<void> {
-  // Deletes ALL existing entries
-  await knex('users').del()
-  await knex('company_profile').del()
-
   // Inserts seed entries
   const password =
     '$2b$10$bwU7XWjyQMLBdx6gSWFQRuQdZIVhPinhwjsd2iSqAHTO3/Bbwpc9y' // 123456
+
+  const company_profiles = await knex('company_profile').select()
+  if (company_profiles.length > 0) {
+    return
+  }
 
   const baitabitId = uuidv4()
   const paipeId = uuidv4()
