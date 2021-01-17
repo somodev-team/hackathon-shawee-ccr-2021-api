@@ -90,6 +90,9 @@ export class CompanyProfileRepository implements ICompanyProfileRepository {
       userId: data.user_id,
       name: data.name,
       username: data.username,
+      godChildrens: 10 + Math.floor(Math.random() * 40),
+      // Para fins de demonstração esse número está sendo gerado aleatoriamente
+      // Mas basta pegar a quantidade de vinculos da tabela companies_affiliates para ter o numero real
     }))
 
     return result
