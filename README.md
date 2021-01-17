@@ -20,4 +20,10 @@ Basta ter o docker + docker-compose instalado no computador e executar `npm run 
 
 Todo o ambiente (containers e banco de dados) será iniciado e em poucos segundos a API estará pronta para ser utilizada.
 
-# Frontend
+# Generating Migrations
+
+npx knex migrate:make migration_name -x ts
+
+# Generating Seed
+
+npx knex seed:make migration_name -x ts

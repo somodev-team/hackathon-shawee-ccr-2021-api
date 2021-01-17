@@ -1,7 +1,0 @@
-{
-  "name": "Dindo",
-  "short_name": "Dindo",
-  "display": "standalone",
-  "scope": "/",
-  "start_url": "/"
-}
