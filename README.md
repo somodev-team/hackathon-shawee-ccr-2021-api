@@ -1,4 +1,6 @@
-# Dindo - Hackathon Shawee CCR 2021
+<p align="center">
+  <img src="docs/logo.png" width="100">
+</p>
 
 # API
 
